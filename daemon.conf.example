@@ -1,0 +1,26 @@
+# Simple Connect 配置文件示例
+#
+# Windows 端 (监听模式):
+#   simple_connect.exe daemon --listen 0.0.0.0:18888 --storage ./downloads
+#
+# Linux 端 (连接模式):
+#   simple_connect daemon --connect <Windows公网IP>:18888 --storage ./downloads
+
+[daemon]
+# 监听地址 (Windows 模式)
+# listen_addr = "0.0.0.0:18888"
+
+# 连接地址 (Linux 模式)
+# connect_addr = "1.2.3.4:18888"
+
+# 文件存储目录
+storage_dir = "./downloads"
+
+# 块大小 (默认 64KB)
+chunk_size = 65536
+
+# 心跳间隔 (秒)
+heartbeat_interval = 30
+
+# 连接超时 (秒)
+timeout = 60
